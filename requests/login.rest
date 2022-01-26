@@ -1,0 +1,21 @@
+
+###
+POST http://localhost:3003/api/login
+content-type: application/json
+
+{
+   "username": "klimkodima@tut.by",
+    "password": "secret"
+}
+
+###
+POST http://localhost:3003/api/login
+content-type: application/json
+
+{
+   "username": "root",
+    "password": "secret1"
+}
+
+###
+DELETE http://localhost:3003/api/login
