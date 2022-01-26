@@ -30,6 +30,7 @@ router.post('/', async (req, res) => {
   }
 
   const token = jwt.sign(userForToken, process.env.SECRET,{ expiresIn: 60*60*24*10 })
+  console.log(token,user.id)
   await Session.create({ token: token, userId: user.id })
   res
     .status(200)

@@ -8,13 +8,13 @@ module.exports = {
         primaryKey: true,
         autoIncrement: true
       },
-      userId: {
+      user_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: { model: 'users', key: 'id' }
       },
       token: {
-        type: DataTypes.TEXT,
+        type: DataTypes.STRING,
         allowNull: false,
         unique: true
       },

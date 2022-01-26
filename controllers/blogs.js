@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const { tokenExtractor } = require('../util/middleware')
+const { tokenExtractor, userFromToken } = require('../util/middleware')
 const { Blog, User } = require('../models')
 const { Op } = require('sequelize')
 
@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
       [Op.or]: [
         {
           text: {
-            [Op.substring]: req.query.search
+            [Op.iLike]: `%${req.query.search}%`
           }
         },
         {
@@ -35,19 +35,16 @@ router.get('/', async (req, res) => {
         model: User,
         attributes: ['name']
       },
-      order: [
-        ['likes', 'DESC'],
-      ],
+      order: [['likes', 'DESC']],
       where
     }
   )
   res.json(blogs)
 })
 
-router.post('/', tokenExtractor, async (req, res) => {
+router.post('/', userFromToken, async (req, res) => {
   try {
-    const user = await User.findByPk(req.decodedToken.id)
-    const blog = await Blog.create({ ...req.body, userId: user.id })
+    const blog = await Blog.create({ ...req.body, userId: req.user.id })
     res.json(blog)
   } catch(error) {
     throw Error('ValidationError'+ error)

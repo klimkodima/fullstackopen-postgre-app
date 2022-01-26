@@ -26,7 +26,7 @@ User.init({
     type: DataTypes.STRING,
     allowNull: false
   },
-  disabled: {
+  disable: {
     type: DataTypes.BOOLEAN,
     allowNull: false,
     defaultValue: true

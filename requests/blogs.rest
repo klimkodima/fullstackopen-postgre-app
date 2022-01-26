@@ -4,12 +4,12 @@ GET http://localhost:3003/api/blogs
 ###
 POST http://localhost:3003/api/blogs/ HTTP/1.1
 content-type: application/json
-authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtsaW1rb2RpbWFAdHV0LmJ5IiwibmFtZSI6IkFydG8gSGVsbGFzIiwiaWQiOjEsImlhdCI6MTY0MzExMjEwOSwiZXhwIjoxNjQzOTc2MTA5fQ.dwFUbuRefqLyJrvPfuQc3Jb_0euW6ucajLegYNFMI2U
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtsaW1rb2RpbWFAdHV0LmJ5IiwibmFtZSI6IkFydG8gSGVsbGFzIiwiaWQiOjEsImlhdCI6MTY0MzE5MTEwNCwiZXhwIjoxNjQ0MDU1MTA0fQ.LuFsy0BUIizbZoiYsIN2w8_Vv4BNu-spA9y-1tWJh4k
 
 {
-  "text": "Mary Poppendieck blog 1hg react",
+  "text": "Mary Poppendieck blog 1hg react2",
   "author": "Arto Hellas",
-  "url": "/mary_poppendieck/1 ",
+  "url": "/mary_poppendieck/12 ",
   "likes": "9",
   "year": "2017"
 }

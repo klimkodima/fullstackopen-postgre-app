@@ -19,3 +19,4 @@ content-type: application/json
 
 ###
 DELETE http://localhost:3003/api/login
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtsaW1rb2RpbWFAdHV0LmJ5IiwibmFtZSI6IkFydG8gSGVsbGFzIiwiaWQiOjEsImlhdCI6MTY0MzExMjEwOSwiZXhwIjoxNjQzOTc2MTA5fQ.dwFUbuRefqLyJrvPfuQc3Jb_0euW6ucajLegYNFMI2U

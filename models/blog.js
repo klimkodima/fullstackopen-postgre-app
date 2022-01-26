@@ -29,7 +29,12 @@ Blog.init({
     allowNull: false,
     validate: {
       min:1991,
-      max: 2022
+      greaterThanCurrent(value) {
+        const current = new Date().getFullYear()
+        if (parseInt(value) > current) {
+          throw new Error(`year can not be greater than ${current}`)
+        }
+      }
     }
   }
 }, {

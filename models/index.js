@@ -9,7 +9,8 @@ Blog.belongsTo(User)
 User.belongsToMany(Blog, { through: ReadingList , as: 'readings' })
 Blog.belongsToMany(User, { through: ReadingList, as: 'readings_users' })
 
-User.hasOne(Session)
+User.hasMany(Session)
+Session.belongsTo(User)
 
 
 module.exports = {
